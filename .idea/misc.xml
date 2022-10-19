@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PCGAMER/Desktop/ChristianHarp/app/src/main/res/layout/content_main.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/PCGAMER/Desktop/ChristianHarp/app/src/main/res/layout/fragment_christian_harp.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PCGAMER/Desktop/ChristianHarp/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/PCGAMER/Desktop/ChristianHarp/app/src/main/res/layout/row_hymn.xml" value="0.11367521367521367" />
       </map>
     </option>
   </component>
