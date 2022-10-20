@@ -12,9 +12,9 @@ class ChristianHarpAdapter(): RecyclerView.Adapter<ChristianHarpViewHolder>() {
     private var hymnList: List<ChristianHarpModel> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChristianHarpViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_hymn, parent, false)
+        val item = RowHymnBinding.inflate(LayoutInflater.from(parent.context),parent, false)
 
-        return ChristianHarpViewHolder(view)
+        return ChristianHarpViewHolder(item)
     }
 
     override fun onBindViewHolder(holder: ChristianHarpViewHolder, position: Int) {
