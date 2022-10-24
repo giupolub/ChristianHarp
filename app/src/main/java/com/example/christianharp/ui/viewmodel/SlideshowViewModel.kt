@@ -1,4 +1,4 @@
-package com.example.christianharp.ui.slideshow
+package com.example.christianharp.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

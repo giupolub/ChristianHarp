@@ -1,6 +1,7 @@
-package com.example.christianharp.ui.home
+package com.example.christianharp.ui.repository
 
 import androidx.room.*
+import com.example.christianharp.ui.model.ChristianHarpModel
 
 @Dao
 interface ChristianHarpDAO {
@@ -13,6 +14,9 @@ interface ChristianHarpDAO {
 
     @Delete
     fun delete(hymn: ChristianHarpModel)
+
+    @Query("SELECT * FROM HymnsChristianHarp")
+    fun getAll(): List<ChristianHarpModel>
 
     @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
     fun searchId(id: Int): ChristianHarpModel

@@ -1,11 +1,11 @@
-package com.example.christianharp.ui.home
+package com.example.christianharp.ui.view.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.christianharp.R
 import com.example.christianharp.databinding.RowHymnBinding
+import com.example.christianharp.ui.model.ChristianHarpModel
+import com.example.christianharp.ui.view.viewholder.ChristianHarpViewHolder
 
 class ChristianHarpAdapter(): RecyclerView.Adapter<ChristianHarpViewHolder>() {
 
@@ -23,5 +23,10 @@ class ChristianHarpAdapter(): RecyclerView.Adapter<ChristianHarpViewHolder>() {
 
     override fun getItemCount(): Int {
         return hymnList.count()
+    }
+
+    fun updatedHymns(list: List<ChristianHarpModel>) {
+        hymnList = list
+        notifyDataSetChanged()
     }
 }

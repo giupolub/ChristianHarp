@@ -1,4 +1,4 @@
-package com.example.christianharp.ui.slideshow
+package com.example.christianharp.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.christianharp.databinding.FragmentSlideshowBinding
+import com.example.christianharp.ui.viewmodel.SlideshowViewModel
 
 class SlideshowFragment : Fragment() {
 

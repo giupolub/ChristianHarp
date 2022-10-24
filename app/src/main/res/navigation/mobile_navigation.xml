@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.christianharp.ui.home.ChristianHarpFragment"
+        android:name="com.example.christianharp.ui.view.ChristianHarpFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_christian_harp" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.christianharp.ui.gallery.GalleryFragment"
+        android:name="com.example.christianharp.ui.view.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.christianharp.ui.slideshow.SlideshowFragment"
+        android:name="com.example.christianharp.ui.view.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

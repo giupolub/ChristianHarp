@@ -1,6 +1,7 @@
-package com.example.christianharp.ui.home
+package com.example.christianharp.ui.repository
 
 import android.content.Context
+import com.example.christianharp.ui.model.ChristianHarpModel
 
 class ChristianHarpRepository(context: Context) {
 
@@ -11,4 +12,7 @@ class ChristianHarpRepository(context: Context) {
         christianHarpDataBase.insert(hymn)
     }
 
+    fun getAll(): List<ChristianHarpModel> {
+        return christianHarpDataBase.getAll()
+    }
 }

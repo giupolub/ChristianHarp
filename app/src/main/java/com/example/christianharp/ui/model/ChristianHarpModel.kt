@@ -1,4 +1,4 @@
-package com.example.christianharp.ui.home
+package com.example.christianharp.ui.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

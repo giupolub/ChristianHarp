@@ -1,13 +1,13 @@
-package com.example.christianharp.ui.home
+package com.example.christianharp.ui.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import com.example.christianharp.MainActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.christianharp.R
 import com.example.christianharp.databinding.ActivityAddHymnBinding
+import com.example.christianharp.ui.viewmodel.AddHymnViewModel
+import com.example.christianharp.ui.model.ChristianHarpModel
 
 class AddHymnActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -19,6 +19,8 @@ class AddHymnActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = ActivityAddHymnBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel = ViewModelProvider(this).get(AddHymnViewModel::class.java)
 
         binding.editAddName.setOnClickListener(this)
         binding.editAddHymn.setOnClickListener(this)
@@ -36,9 +38,8 @@ class AddHymnActivity : AppCompatActivity(), View.OnClickListener {
                 this.name = name
                 this.hymn = hymn
             }
-
             viewModel.save(model)
-            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 }
