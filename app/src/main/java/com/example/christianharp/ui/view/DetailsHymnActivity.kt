@@ -2,13 +2,14 @@ package com.example.christianharp.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.christianharp.R
 import com.example.christianharp.databinding.ActivityAddHymnBinding
 import com.example.christianharp.databinding.ActivityDetailsHymnBinding
 import com.example.christianharp.ui.viewmodel.DetailsHymnViewModel
 
-class DetailsHymnActivity : AppCompatActivity() {
+class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityDetailsHymnBinding
     private lateinit var viewModel: DetailsHymnViewModel
@@ -23,10 +24,18 @@ class DetailsHymnActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(DetailsHymnViewModel::class.java)
 
         binding.textTitle.text
+        binding.buttonDelete.setOnClickListener(this)
 
         observe()
 
         loadData()
+    }
+
+    override fun onClick(v: View) {
+        if (v.id == R.id.button_delete) {
+            viewModel.delete(hymnId)
+            finish()
+        }
     }
 
     private fun observe() {
@@ -34,6 +43,7 @@ class DetailsHymnActivity : AppCompatActivity() {
             binding.textTitle.setText(it.name)
             binding.textLyrics.setText(it.hymn)
         }
+
     }
 
     private fun loadData() {
@@ -43,6 +53,8 @@ class DetailsHymnActivity : AppCompatActivity() {
             viewModel.get(hymnId)
         }
     }
+
+
 
 
 }

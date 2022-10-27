@@ -17,4 +17,8 @@ class DetailsHymnViewModel(application: Application) : AndroidViewModel(applicat
     fun get (id: Int) {
         _hymn.value = repository.get(id)
     }
+
+    fun delete (id: Int) {
+        repository.delete(id)
+    }
 }

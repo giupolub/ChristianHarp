@@ -22,24 +22,30 @@ class AddHymnActivity : AppCompatActivity(), View.OnClickListener {
 
         viewModel = ViewModelProvider(this).get(AddHymnViewModel::class.java)
 
-        binding.editAddName.setOnClickListener(this)
-        binding.editAddHymn.setOnClickListener(this)
+        binding.editTitle.setOnClickListener(this)
+        binding.editStanza1.setOnClickListener(this)
+        binding.editRefrain.setOnClickListener(this)
+        binding.editStanza2.setOnClickListener(this)
+        binding.editStanza3.setOnClickListener(this)
+        binding.editStanza4.setOnClickListener(this)
+        binding.editStanza5.setOnClickListener(this)
+        binding.editStanza6.setOnClickListener(this)
         binding.buttonAdd.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_add) {
-            val name = binding.editAddName.text.toString()
-            val hymn = binding.editAddHymn.text.toString()
-
-            val model = ChristianHarpModel().apply {
-                this.id = 0
-                this.name = name
-                this.hymn = hymn
-            }
-            viewModel.save(model)
-            finish()
+//            val name = binding.editAddName.text.toString()
+//            val hymn = binding.editAddHymn.text.toString()
+//
+//            val model = ChristianHarpModel().apply {
+//                this.id = 0
+//                this.name = name
+//                this.hymn = hymn
+//            }
+//            viewModel.save(model)
+//            finish()
         }
     }
 }
