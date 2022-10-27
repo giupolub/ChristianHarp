@@ -4,32 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".ui.view.AddHymnActivity">
+    android:padding="8dp"
+    tools:context=".ui.view.DetailsHymnActivity">
 
-    <EditText
-        android:id="@+id/edit_add_name"
+    <TextView
+        android:id="@+id/text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hymn_title"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edit_add_hymn"
+    <TextView
+        android:id="@+id/text_lyrics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hymn_title"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_add_name" />
-
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADICIONAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_add_hymn" />
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

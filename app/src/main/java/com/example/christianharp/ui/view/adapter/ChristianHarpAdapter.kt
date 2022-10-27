@@ -5,16 +5,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.christianharp.databinding.RowHymnBinding
 import com.example.christianharp.ui.model.ChristianHarpModel
+import com.example.christianharp.ui.view.listener.OnCHListener
 import com.example.christianharp.ui.view.viewholder.ChristianHarpViewHolder
 
 class ChristianHarpAdapter(): RecyclerView.Adapter<ChristianHarpViewHolder>() {
 
     private var hymnList: List<ChristianHarpModel> = listOf()
+    private lateinit var listener: OnCHListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChristianHarpViewHolder {
         val item = RowHymnBinding.inflate(LayoutInflater.from(parent.context),parent, false)
 
-        return ChristianHarpViewHolder(item)
+        return ChristianHarpViewHolder(item, listener)
     }
 
     override fun onBindViewHolder(holder: ChristianHarpViewHolder, position: Int) {
@@ -28,5 +30,9 @@ class ChristianHarpAdapter(): RecyclerView.Adapter<ChristianHarpViewHolder>() {
     fun updatedHymns(list: List<ChristianHarpModel>) {
         hymnList = list
         notifyDataSetChanged()
+    }
+
+    fun attachListener (hymnListener: OnCHListener) {
+        listener = hymnListener
     }
 }

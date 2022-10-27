@@ -19,6 +19,9 @@ interface ChristianHarpDAO {
     fun getAll(): List<ChristianHarpModel>
 
     @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
+    fun get(id: Int): ChristianHarpModel
+
+    @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
     fun searchId(id: Int): ChristianHarpModel
 
     @Query("SELECT * FROM HymnsChristianHarp WHERE name = :name")

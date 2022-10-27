@@ -1,5 +1,6 @@
 package com.example.christianharp.ui.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.christianharp.databinding.FragmentChristianHarpBinding
 import com.example.christianharp.ui.viewmodel.ChristianHarpViewModel
 import com.example.christianharp.ui.view.adapter.ChristianHarpAdapter
+import com.example.christianharp.ui.view.listener.OnCHListener
 
 class ChristianHarpFragment : Fragment() {
 
@@ -30,6 +32,20 @@ class ChristianHarpFragment : Fragment() {
 
         //Adapter da RecycleView
         binding.recyclerChristianHarp.adapter = adapter
+
+        val listener = object : OnCHListener {
+            override fun onClick(id: Int) {
+                val intent = Intent(context, DetailsHymnActivity::class.java)
+                val bundle = Bundle()
+                bundle.putInt("hymnID", id)
+                intent.putExtras(bundle)
+
+                startActivity(intent)
+            }
+
+        }
+
+        adapter.attachListener(listener)
 
         observe()
 

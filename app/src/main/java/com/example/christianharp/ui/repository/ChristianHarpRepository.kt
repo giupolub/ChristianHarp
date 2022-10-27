@@ -15,4 +15,8 @@ class ChristianHarpRepository(context: Context) {
     fun getAll(): List<ChristianHarpModel> {
         return christianHarpDataBase.getAll()
     }
+
+    fun get(id: Int): ChristianHarpModel {
+        return christianHarpDataBase.get(id)
+    }
 }
