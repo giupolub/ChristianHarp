@@ -28,6 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:hint="@string/stanza1"
         android:textSize="18sp" />
 
@@ -35,6 +37,8 @@
         android:id="@+id/edit_refrain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/refrain"
         android:textSize="18sp" />
@@ -50,6 +54,8 @@
         android:id="@+id/edit_stanza2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/stanza2"
         android:textSize="18sp" />
@@ -65,6 +71,8 @@
         android:id="@+id/edit_stanza3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/stanza3"
         android:textSize="18sp" />
@@ -80,6 +88,8 @@
         android:id="@+id/edit_stanza4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/stanza4"
         android:textSize="18sp" />
@@ -95,6 +105,8 @@
         android:id="@+id/edit_stanza5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/stanza5"
         android:textSize="18sp" />
@@ -110,6 +122,8 @@
         android:id="@+id/edit_stanza6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
         android:gravity="center"
         android:hint="@string/stanza6"
         android:textSize="18sp" />
