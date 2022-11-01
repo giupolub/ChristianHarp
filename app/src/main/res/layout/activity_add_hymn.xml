@@ -1,138 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".ui.view.AddHymnActivity">
+    android:padding="8dp"
+    android:background="@color/teal_200">
 
-    <EditText
-        android:id="@+id/edit_title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="@string/hymn_title"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/one"
-        android:textSize="18sp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/edit_stanza1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:hint="@string/stanza1"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_title"
+                style="@style/DefaultEditText"
+                android:hint="@string/hymn_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edit_refrain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/refrain"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/text1"
+                style="@style/DefaultTextView"
+                android:text="@string/one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_title" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/two"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_stanza1"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-    <EditText
-        android:id="@+id/edit_stanza2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/stanza2"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_refrain"
+                style="@style/DefaultEditText"
+                android:layout_marginTop="8dp"
+                android:hint="@string/refrain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/three"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/text2"
+                style="@style/DefaultTextView"
+                android:text="@string/two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_refrain" />
 
-    <EditText
-        android:id="@+id/edit_stanza3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/stanza3"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_stanza2"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text2" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/four"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/text3"
+                style="@style/DefaultTextView"
+                android:text="@string/three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza2" />
 
-    <EditText
-        android:id="@+id/edit_stanza4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/stanza4"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_stanza3"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text3" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/five"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/text4"
+                style="@style/DefaultTextView"
+                android:text="@string/four"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza3" />
 
-    <EditText
-        android:id="@+id/edit_stanza5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/stanza5"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_stanza4"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text4" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/six"
-        android:textSize="18sp" />
+            <TextView
+                android:id="@+id/text5"
+                style="@style/DefaultTextView"
+                android:text="@string/five"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza4" />
 
-    <EditText
-        android:id="@+id/edit_stanza6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:gravity="center"
-        android:hint="@string/stanza6"
-        android:textSize="18sp" />
+            <EditText
+                android:id="@+id/edit_stanza5"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text5" />
 
-    <Button
-        android:id="@+id/button_add"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_hymn" />
+            <TextView
+                android:id="@+id/text6"
+                style="@style/DefaultTextView"
+                android:text="@string/six"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza5" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/edit_stanza6"
+                style="@style/DefaultEditText"
+                android:hint="@string/stanza6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text6" />
+
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/add_hymn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_stanza6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#0277BD"
-    android:padding="8dp">
+    android:paddingTop="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_hymn"
@@ -25,5 +27,11 @@
             android:drawablePadding="16dp"/>
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"/>
 
 </LinearLayout>

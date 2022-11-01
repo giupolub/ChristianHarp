@@ -22,4 +22,22 @@
     <style name="Theme.ChristianHarp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ChristianHarp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DefaultEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:maxLines">10</item>
+    </style>
+
+    <style name="DefaultTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
 </resources>
