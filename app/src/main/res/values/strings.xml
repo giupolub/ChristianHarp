@@ -25,4 +25,5 @@
     <string name="stanza5">Quinta estrofe</string>
     <string name="six">6</string>
     <string name="stanza6">Sexta estrofe</string>
+    <string name="delete_hymn">Excluir</string>
 </resources>

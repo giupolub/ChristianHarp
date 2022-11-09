@@ -13,7 +13,7 @@ class ChristianHarpViewHolder(
 
     fun bind(hymn: ChristianHarpModel) {
 
-        bind.textHymn.text = hymn.name
+        bind.textHymn.text = hymn.title
 
         bind.textHymn.setOnClickListener {
             listener.onClick(hymn.id)

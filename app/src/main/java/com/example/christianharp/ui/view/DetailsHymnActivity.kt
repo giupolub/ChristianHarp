@@ -23,7 +23,7 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
 
         viewModel = ViewModelProvider(this).get(DetailsHymnViewModel::class.java)
 
-        binding.textTitle.text
+        //binding.textTitle.text
         binding.buttonDelete.setOnClickListener(this)
 
         observe()
@@ -40,8 +40,15 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun observe() {
         viewModel.hymn.observe(this) {
-            binding.textTitle.setText(it.name)
-            binding.textLyrics.setText(it.hymn)
+            binding.editTitle.setText(it.title)
+            binding.editStanza1.setText(it.stanza1)
+            binding.editRefrain.setText(it.refrain)
+            binding.editStanza2.setText(it.stanza2)
+            binding.editStanza3.setText(it.stanza3)
+            binding.editStanza4.setText(it.stanza4)
+            binding.editStanza5.setText(it.stanza5)
+            binding.editStanza6.setText(it.stanza6)
+
         }
 
     }
@@ -53,8 +60,6 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
             viewModel.get(hymnId)
         }
     }
-
-
 
 
 }

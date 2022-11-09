@@ -22,30 +22,34 @@ class AddHymnActivity : AppCompatActivity(), View.OnClickListener {
 
         viewModel = ViewModelProvider(this).get(AddHymnViewModel::class.java)
 
-        binding.editTitle.setOnClickListener(this)
-        binding.editStanza1.setOnClickListener(this)
-        binding.editRefrain.setOnClickListener(this)
-        binding.editStanza2.setOnClickListener(this)
-        binding.editStanza3.setOnClickListener(this)
-        binding.editStanza4.setOnClickListener(this)
-        binding.editStanza5.setOnClickListener(this)
-        binding.editStanza6.setOnClickListener(this)
         binding.buttonAdd.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_add) {
-//            val name = binding.editAddName.text.toString()
-//            val hymn = binding.editAddHymn.text.toString()
-//
-//            val model = ChristianHarpModel().apply {
-//                this.id = 0
-//                this.name = name
-//                this.hymn = hymn
-//            }
-//            viewModel.save(model)
-//            finish()
+            val title = binding.editTitle.text.toString()
+            val stanza1 = binding.editStanza1.text.toString()
+            val refrain = binding.editRefrain.text.toString()
+            val stanza2 = binding.editStanza2.text.toString()
+            val stanza3 = binding.editStanza3.text.toString()
+            val stanza4 = binding.editStanza4.text.toString()
+            val stanza5 = binding.editStanza5.text.toString()
+            val stanza6 = binding.editStanza6.text.toString()
+
+            val model = ChristianHarpModel().apply {
+                this.id = 0
+                this.title = title
+                this.stanza1 = stanza1
+                this.refrain = refrain
+                this.stanza2 = stanza2
+                this.stanza3 = stanza3
+                this.stanza4 = stanza4
+                this.stanza5 = stanza5
+                this.stanza6 = stanza6
+            }
+            viewModel.save(model)
+            finish()
         }
     }
 }

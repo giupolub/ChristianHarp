@@ -24,10 +24,10 @@ interface ChristianHarpDAO {
     @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
     fun searchId(id: Int): ChristianHarpModel
 
-    @Query("SELECT * FROM HymnsChristianHarp WHERE name = :name")
-    fun searchName(name: String): ChristianHarpModel
-
-    @Query("SELECT * FROM HymnsChristianHarp WHERE name = :keysWord")
-    fun searchKeysWord(keysWord: String): ChristianHarpModel
+//    @Query("SELECT * FROM HymnsChristianHarp WHERE name = :name")
+//    fun searchName(name: String): ChristianHarpModel
+//
+//    @Query("SELECT * FROM HymnsChristianHarp WHERE name = :keysWord")
+//    fun searchKeysWord(keysWord: String): ChristianHarpModel
 
 }

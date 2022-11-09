@@ -15,7 +15,7 @@ class AddHymnViewModel(application: Application) : AndroidViewModel(application)
     val saveHymn: LiveData<ChristianHarpModel> = _saveHymn
 
     fun save(hymn: ChristianHarpModel) {
-        if (hymn.name != "" && hymn.hymn != "") {
+        if (hymn.title != "" && hymn.stanza1 != "") {
             repository.insert(hymn)
         }
     }
