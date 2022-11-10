@@ -7,8 +7,8 @@
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,119 +18,71 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/edit_title"
-                style="@style/DefaultEditText"
-                android:hint="@string/hymn_title"
+            <TextView
+                android:id="@+id/text_title"
+                style="@style/DefaultTextView"
+                android:layout_marginTop="0dp"
+                android:text="@string/hymn_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text1"
+                android:id="@+id/text_stanza1"
                 style="@style/DefaultTextView"
-                android:text="@string/one"
+                android:text="@string/stanza1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_title" />
+                app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
-            <EditText
-                android:id="@+id/edit_stanza1"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text1" />
-
-            <EditText
-                android:id="@+id/edit_refrain"
-                style="@style/DefaultEditText"
-                android:layout_marginTop="8dp"
+            <TextView
+                android:id="@+id/text_refrain"
+                style="@style/DefaultTextView"
+                android:text="@string/refrain"
                 android:textStyle="bold"
-                android:hint="@string/refrain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza1" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza1" />
 
             <TextView
-                android:id="@+id/text2"
+                android:id="@+id/text_stanza2"
                 style="@style/DefaultTextView"
-                android:text="@string/two"
+                android:text="@string/stanza2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_refrain" />
-
-            <EditText
-                android:id="@+id/edit_stanza2"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text2" />
+                app:layout_constraintTop_toBottomOf="@+id/text_refrain" />
 
             <TextView
-                android:id="@+id/text3"
+                android:id="@+id/text_stanza3"
                 style="@style/DefaultTextView"
-                android:text="@string/three"
+                android:text="@string/stanza3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza2" />
-
-            <EditText
-                android:id="@+id/edit_stanza3"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text3" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza2" />
 
             <TextView
-                android:id="@+id/text4"
+                android:id="@+id/text_stanza4"
                 style="@style/DefaultTextView"
-                android:text="@string/four"
+                android:text="@string/stanza4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza3" />
-
-            <EditText
-                android:id="@+id/edit_stanza4"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text4" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza3" />
 
             <TextView
-                android:id="@+id/text5"
+                android:id="@+id/text_stanza5"
                 style="@style/DefaultTextView"
-                android:text="@string/five"
+                android:text="@string/stanza5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza4" />
-
-            <EditText
-                android:id="@+id/edit_stanza5"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text5" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza4" />
 
             <TextView
-                android:id="@+id/text6"
+                android:id="@+id/text_stanza6"
                 style="@style/DefaultTextView"
-                android:text="@string/six"
+                android:text="@string/stanza6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza5" />
-
-            <EditText
-                android:id="@+id/edit_stanza6"
-                style="@style/DefaultEditText"
-                android:hint="@string/stanza6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text6" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza5" />
 
             <Button
                 android:id="@+id/button_delete"
@@ -143,7 +95,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_stanza6" />
+                app:layout_constraintTop_toBottomOf="@+id/text_stanza6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

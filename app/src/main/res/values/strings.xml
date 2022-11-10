@@ -10,20 +10,20 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="hymn_title">1 - Título do Hino</string>
+    <string name="hymn_title">000 - Título do Hino</string>
     <string name="add_hymn">Adicionar Hino</string>
     <string name="one">1</string>
-    <string name="stanza1">Primeira estrofe</string>
+    <string name="stanza1">1 - Primeira estrofe</string>
     <string name="two">2</string>
-    <string name="stanza2">Segunda estrofe</string>
+    <string name="stanza2">2 - Segunda estrofe</string>
     <string name="three">3</string>
-    <string name="stanza3">Terceira estrofe</string>
+    <string name="stanza3">3 - Terceira estrofe</string>
     <string name="refrain">Refrão</string>
-    <string name="stanza4">Quarta estrofe</string>
+    <string name="stanza4">4 - Quarta estrofe</string>
     <string name="four">4</string>
     <string name="five">5</string>
-    <string name="stanza5">Quinta estrofe</string>
+    <string name="stanza5">5 - Quinta estrofe</string>
     <string name="six">6</string>
-    <string name="stanza6">Sexta estrofe</string>
+    <string name="stanza6">6 - Sexta estrofe</string>
     <string name="delete_hymn">Excluir</string>
 </resources>

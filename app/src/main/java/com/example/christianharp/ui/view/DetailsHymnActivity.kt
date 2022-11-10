@@ -40,14 +40,14 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun observe() {
         viewModel.hymn.observe(this) {
-            binding.editTitle.setText(it.title)
-            binding.editStanza1.setText(it.stanza1)
-            binding.editRefrain.setText(it.refrain)
-            binding.editStanza2.setText(it.stanza2)
-            binding.editStanza3.setText(it.stanza3)
-            binding.editStanza4.setText(it.stanza4)
-            binding.editStanza5.setText(it.stanza5)
-            binding.editStanza6.setText(it.stanza6)
+            binding.textTitle.text = it.title
+            binding.textStanza1.text = it.stanza1
+            binding.textRefrain.text = it.refrain
+            binding.textStanza2.text = it.stanza2
+            binding.textStanza3.text = it.stanza3
+            binding.textStanza4.text = it.stanza4
+            binding.textStanza5.text = it.stanza5
+            binding.textStanza6.text = it.stanza6
 
         }
 
