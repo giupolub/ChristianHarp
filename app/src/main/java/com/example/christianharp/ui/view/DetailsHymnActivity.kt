@@ -23,8 +23,13 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
 
         viewModel = ViewModelProvider(this).get(DetailsHymnViewModel::class.java)
 
-        //binding.textTitle.text
-        binding.buttonDelete.setOnClickListener(this)
+        binding.imagePrevious.setOnClickListener(this)
+        binding.imageZoomIn.setOnClickListener(this)
+        binding.imageZoomOut.setOnClickListener(this)
+        binding.imagePlay.setOnClickListener(this)
+        binding.imageEdit.setOnClickListener(this)
+        binding.imageDelete.setOnClickListener(this)
+        binding.imageNext.setOnClickListener(this)
 
         observe()
 
@@ -32,7 +37,7 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.button_delete) {
+        if (v.id == R.id.image_delete) {
             viewModel.delete(hymnId)
             finish()
         }
