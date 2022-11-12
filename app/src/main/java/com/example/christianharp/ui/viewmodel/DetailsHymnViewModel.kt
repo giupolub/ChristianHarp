@@ -1,6 +1,7 @@
 package com.example.christianharp.ui.viewmodel
 
 import android.app.Application
+import android.text.Spannable
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -21,4 +22,5 @@ class DetailsHymnViewModel(application: Application) : AndroidViewModel(applicat
     fun delete (id: Int) {
         repository.delete(id)
     }
+
 }
