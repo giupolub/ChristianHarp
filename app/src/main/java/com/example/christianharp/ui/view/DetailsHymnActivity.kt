@@ -21,7 +21,7 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityDetailsHymnBinding
     private lateinit var viewModel: DetailsHymnViewModel
     private var hymnId = 0
-    private var fontSize = 14f
+    private var fontSize = 18f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,26 +82,30 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun zoomIn() {
-        fontSize += 4f
-        binding.textTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza1.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textRefrain.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza2.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza3.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza4.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza5.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza6.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+        if (fontSize < 40f) {
+            fontSize += 2f
+            binding.textTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza1.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textRefrain.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza2.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza3.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza4.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza5.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza6.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+        }
     }
 
     private fun zoomOut() {
-        fontSize -= 4f
-        binding.textTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza1.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textRefrain.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza2.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza3.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza4.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza5.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
-        binding.textStanza6.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+        if (fontSize > 13f) {
+            fontSize -= 2f
+            binding.textTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza1.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textRefrain.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza2.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza3.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza4.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza5.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+            binding.textStanza6.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
+        }
     }
 }
