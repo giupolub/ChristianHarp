@@ -20,6 +20,14 @@ class ChristianHarpRepository(context: Context) {
         return christianHarpDataBase.get(id)
     }
 
+    fun getPrevious(id: Int): ChristianHarpModel {
+        return christianHarpDataBase.get(id)
+    }
+
+    fun getNext(id: Int): ChristianHarpModel {
+        return christianHarpDataBase.get(id)
+    }
+
     fun delete(id: Int) {
         val hymn = get(id)
         christianHarpDataBase.delete(hymn)

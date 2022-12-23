@@ -1,5 +1,6 @@
 package com.example.christianharp.ui.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
@@ -56,12 +57,17 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
             R.id.image_zoom_out -> {
                 zoomOut()
             }
+            R.id.image_previous -> {
+                previousHymn()
+            }
+            R.id.image_next -> {
+                nextHymn()
+            }
         }
     }
 
     private fun observe() {
         viewModel.hymn.observe(this) {
-
             binding.textTitle.text = it.title
             binding.textStanza1.text = it.stanza1
             binding.textRefrain.text = it.refrain
@@ -107,5 +113,13 @@ class DetailsHymnActivity : AppCompatActivity(), View.OnClickListener {
             binding.textStanza5.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
             binding.textStanza6.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize)
         }
+    }
+
+    private fun previousHymn() {
+        recreate()
+    }
+
+    private fun nextHymn() {
+        TODO()
     }
 }

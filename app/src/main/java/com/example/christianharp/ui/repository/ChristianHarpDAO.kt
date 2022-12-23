@@ -21,6 +21,12 @@ interface ChristianHarpDAO {
     @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
     fun get(id: Int): ChristianHarpModel
 
+//    @Query("SELECT * FROM HymnsChristianHarp WHERE id - 1 = :id")
+//    fun getPrevious(id: Int): ChristianHarpModel
+//
+//    @Query("SELECT * FROM HymnsChristianHarp WHERE id + 1 = :id")
+//    fun getNext(id: Int): ChristianHarpModel
+
     @Query("SELECT * FROM HymnsChristianHarp WHERE id = :id")
     fun searchId(id: Int): ChristianHarpModel
 

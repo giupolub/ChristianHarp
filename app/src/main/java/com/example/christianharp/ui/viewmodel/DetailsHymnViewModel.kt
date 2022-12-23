@@ -23,4 +23,17 @@ class DetailsHymnViewModel(application: Application) : AndroidViewModel(applicat
         repository.delete(id)
     }
 
+    fun getPrevious (id: Int) {
+        if (id >= 0) {
+            _hymn.value = repository.get(id)
+        }
+
+    }
+
+    fun getNext (id: Int) {
+        if (id <= 640) {
+            _hymn.value = repository.get(id)
+        }
+    }
+
 }
